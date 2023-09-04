@@ -26,8 +26,8 @@ export function Pokegame (){
     let exp2 = hand2.reduce((exp, data)=> exp + data.base_experience,0);
     return (
         <div>
-            <Pokedex data={hand1} exp={exp1}/>
-            <Pokedex data={hand2} exp={exp2}/>
+            <Pokedex data={hand1} exp={exp1} isWinner={exp1>exp2}/>
+            <Pokedex data={hand2} exp={exp2} isWinner={exp2>exp1}/>
 
         </div>
     
