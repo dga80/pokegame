@@ -3,3 +3,27 @@
     justify-content: space-evenly;
     flex-wrap: wrap;
 }
+.Pokedex{
+    text-align: center;
+}
+.Pokedex-button {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    margin-top: 20px;
+    margin-left:50px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    
+}
+
+/* Estilo de hover para el botón */
+.Pokedex-button:hover {
+    background-color: #45a049;
+}
+.total{
+    font-weight: bold;
+    font-size: 1.2rem;
+}

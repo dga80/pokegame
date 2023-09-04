@@ -1,0 +1,6 @@
+body {
+    background-image: url('/public/wallpaper4b.jpg'); /* Ruta a la imagen en la carpeta public */
+    background-size: cover; /* Ajustar la imagen al tamaño de la ventana */
+    background-repeat: no-repeat; /* Evitar la repetición de la imagen */
+    background-attachment: fixed;
+}

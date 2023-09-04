@@ -1,7 +1,11 @@
 import React from "react";
 import { Pokedex } from "./Pokedex";
+import './Pokedex.css'
 
 export function Pokegame (){
+    const handleReloadClick = () => {
+        window.location.reload(); // Recargar la página
+    };
 
     const data = [
         { id: 4, name: 'Charmander', type: 'fire', base_experience: 62 },
@@ -25,7 +29,9 @@ export function Pokegame (){
     let exp1 = hand1.reduce((exp, data)=> exp + data.base_experience,0);
     let exp2 = hand2.reduce((exp, data)=> exp + data.base_experience,0);
     return (
+        
         <div>
+            <button onClick={handleReloadClick} className="Pokedex-button">Start Game</button> {/* Cambiamos el texto del botón */}
             <Pokedex data={hand1} exp={exp1} isWinner={exp1>exp2}/>
             <Pokedex data={hand2} exp={exp2} isWinner={exp2>exp1}/>
 
