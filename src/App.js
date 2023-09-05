@@ -1,11 +1,18 @@
 import './App.css';
-import React from 'react';
+import React, { useState } from 'react';
 import { Pokegame } from './Pokegame';
 
 function App() {
+  const [reloadPokegame, setReloadPokegame] = useState(false);
+
+  const handleReloadPokegame = () => {
+    setReloadPokegame(!reloadPokegame);
+  };
+
   return (
     <div className="App">
-      <Pokegame/>
+      <button onClick={handleReloadPokegame}>Reload Pokegame</button>
+      <Pokegame key={reloadPokegame} />
     </div>
   );
 }

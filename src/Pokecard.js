@@ -11,8 +11,8 @@ export function Pokecard(props) {
         <div className="Pokecard">
             <h1 className="Pokecard-title">{props.name}</h1>
             <img src={imgSRC} alt={props.name} />
-            <div className="Pokecard-data">Type: {props.type}</div>
-            <div className="Pokecard-data">EXP: {props.exp}</div>
+            <div className="Pokecard-data1">Type: {props.type}</div>
+            <div className="Pokecard-data2">EXP: {props.exp}</div>
         </div>
     );
 }
