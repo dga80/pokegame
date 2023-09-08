@@ -38,6 +38,8 @@ export function Pokegame() {
         setExp2(tempExp2);
     };
 
+    
+
     return (
         <div>
             <button onClick={startGame} className="Pokedex-button">Start Game</button>
