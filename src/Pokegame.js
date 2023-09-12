@@ -18,6 +18,7 @@ export function Pokegame() {
     const [hand2, setHand2] = useState(initialData);
     const [exp1, setExp1] = useState(0);
     const [exp2, setExp2] = useState(0);
+    const [showPokecards, setShowPokecards] = useState(false);
 
     const startGame = () => {
         let tempHand1 = [];
@@ -36,15 +37,20 @@ export function Pokegame() {
         setHand2(tempHand2);
         setExp1(tempExp1);
         setExp2(tempExp2);
-    };
 
-    
+        // Mostrar las Pokecards gradualmente
+        setShowPokecards(true);
+    };
 
     return (
         <div>
             <button onClick={startGame} className="Pokedex-button">Start Game</button>
-            <Pokedex data={hand1} exp={exp1} isWinner={exp1 > exp2} />
-            <Pokedex data={hand2} exp={exp2} isWinner={exp2 > exp1} />
+            {showPokecards && (
+                <>
+                    <Pokedex data={hand1} exp={exp1} isWinner={exp1 > exp2} />
+                    <Pokedex data={hand2} exp={exp2} isWinner={exp2 > exp1} />
+                </>
+            )}
         </div>
     );
 }
